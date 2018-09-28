@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SensorDemo</string>
+    <string name="increase_lux">Increase Lux</string>
+    <string name="decrease_lux">Decrease Lux</string>
+    <string name="luxValue">luxValue</string>
+    <string name="version">version</string>
+    <string name="vendor">vendor</string>
+</resources>
