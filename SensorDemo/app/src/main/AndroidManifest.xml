@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.android.sensordemo">
 
+    <!--    Need to add this block to denote that this sensor will be used for the application.
+            If the application requires you to have a certain sensor then make:
+            android:required="true", if it is not needed for the application to function then
+            set it to: android:required="false".
+            If you make it true than devices that don't have that sensor cannot even see it on
+            the app store for download.
+    -->
     <uses-feature   android:name="android.hardware.sensor.light"
                     android:required="true"/>
 
@@ -11,7 +19,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:fullBackupContent="@xml/backup_descriptor"
+        tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".MainActivity"/>
 
         <activity android:name=".SensorActivity">
